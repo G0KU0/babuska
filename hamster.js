@@ -1,6 +1,8 @@
 const axios = require('axios');
 const fs = require('fs');
 const keep_alive = require('./keep_alive.js')
+const keep_alive = require('./index.js')
+
 
 const csvData = fs.readFileSync('authorization.csv', 'utf8');
 const authorizationList = csvData.split('\n').map(line => line.trim()).filter(line => line !== '');
